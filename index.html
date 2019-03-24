@@ -1,0 +1,51 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Emoji Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript">
+    function randomimage()
+    {
+        var img_name = new Array("images/images (1).jpg","images/images (1).png","images/images (2).jpg","imagesimages (2).png","images/images (3).jpg",
+        "images/images (4).jpg","images/images (5).jpg","images/images (6).jpg","images/images (7).jpg","images/images (8).jpg","images/images (9).jpg","images/images (9).jpg");
+        var l = img_name.length;
+        var rnd_no = Math.floor(l*Math.random());
+        document.r_img.src = img_name[rnd_no];
+    }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1 class="shadow-lg p-3 mb-5 bg-wite rounded emoji-head">EMOJI GAME</h1>
+        </div>
+        <div class="q-no">
+        </div>
+        <div class="countdown">
+            Countdown:
+        </div>
+        <div class="count">
+            <input type="text" size="1">
+        </div>
+        <div class="score-board">
+                <div class="player">
+                    <h4>Your score</h4>
+                    <div class="score-box">
+                        0 
+                    </div>
+                </div>
+        </div>
+        <div>
+                <img src="images/images (1).jpg" width="100" height="50" name="r_img" alt="Random image" />
+        </div>
+        <div class="footer">
+            <button id="button" onclick="randomimage()">Show Image</button>
+            <button type="button" class="btn btn-primary">Reset</button>
+        </div>
+    </div>
+</body>
+</html>

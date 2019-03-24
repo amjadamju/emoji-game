@@ -1,0 +1,22 @@
+.countdown{
+    text-align: left;
+}
+.emoji{
+    widows: 100px;
+    height:100px;
+}
+.scoreboard{
+    background-color: aqua;
+}
+.header{
+    margin-left:300px; 
+    margin-right: 300px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    background-image: -moz-linear-gradient()
+}
+.count{
+    font-size: 25px;
+}
