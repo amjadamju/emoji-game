@@ -1,22 +1,70 @@
-.countdown{
-    text-align: left;
-}
-.emoji{
-    widows: 100px;
-    height:100px;
+body{
+    background-image: radial-gradient(rgb(10, 10, 10), rgb(57, 61, 61));
 }
 .scoreboard{
-    background-color: aqua;
+    margin-top: 100px;
+    margin-right: 50px;
 }
 .header{
     margin-left:300px; 
     margin-right: 300px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
-    background-image: -moz-linear-gradient()
+    background-image: linear-gradient(rgb(10, 10, 10), rgb(80, 80, 80));
+}
+
+.countdown{
+    font-size: 25px;
+    margin-left: 55px;
+    font-weight: bolder;
+    margin-right: 100px;
+}
+.emoji{
+    margin-left: 500px;
+}
+.emoji_img{
+    width: 200px;
+    height:200px;
+    margin-bottom: 80px;
+    margin-left: 380px;
+}
+.emoji-ans{
+    size: 50px;
+    margin-bottom: 30px;
+
 }
 .count{
+    margin-left:100px;
+    margin-top: 40px;
+}
+.score{
+    margin-left:350px;
+    margin-top: 40px;
+}
+.input{
+    margin-top: 400px;
+    margin-left: 560px;
+}
+.hestia_logo{
+    height: 200px;
+    width: 250px;
+    margin-left: 50px;
+}
+.iste-logo{
+    margin-left: 900px;
+}
+.buttons{
+    margin-top: 25px;
+}
+.butn1{
+    margin-left: 630px;
+}
+.butn2{
+    margin-left:75px;
+}
+.score-display{
     font-size: 25px;
+    font-weight: bold;
 }

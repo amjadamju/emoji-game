@@ -8,44 +8,79 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript">
+    //javascript starts
+    //generating random emojis
     function randomimage()
     {
-        var img_name = new Array("images/images (1).jpg","images/images (1).png","images/images (2).jpg","imagesimages (2).png","images/images (3).jpg",
+        var img_src = new Array("images/images (1).jpg","images/images (1).png","images/images (2).jpg","imagesimages (2).png","images/images (3).jpg",
         "images/images (4).jpg","images/images (5).jpg","images/images (6).jpg","images/images (7).jpg","images/images (8).jpg","images/images (9).jpg","images/images (9).jpg");
-        var l = img_name.length;
+        var img_name = new Array("pancake");
+        var l = img_src.length;
         var rnd_no = Math.floor(l*Math.random());
-        document.r_img.src = img_name[rnd_no];
+        document.r_img.src = img_src[rnd_no];
     }
+//countdown
+    var timeleft = 15;
+    var downloadTimer = setInterval(function(){
+    document.getElementById("countdown").innerHTML = timeleft ;
+    timeleft -= 1;
+    if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Finished";
+  }
+}, 1000);
+scoreboard
+
+    var score=0;
+    name=document.getElementsByClassName('emoji-ans');
+    if(name==img_name[rnd_no])
+    {
+        alert('You are right');
+        score=score+1;
+    }
+    else{
+        alert('Game Over');
+        score=0;
+    }
+    document.getElementsByClassName('score')=score;    
     </script>
 </head>
 <body>
-    <div class="main">
-        <div class="header">
-            <h1 class="shadow-lg p-3 mb-5 bg-wite rounded emoji-head">EMOJI GAME</h1>
-        </div>
-        <div class="q-no">
-        </div>
-        <div class="countdown">
-            Countdown:
-        </div>
-        <div class="count">
-            <input type="text" size="1">
-        </div>
-        <div class="score-board">
-                <div class="player">
-                    <h4>Your score</h4>
-                    <div class="score-box">
-                        0 
-                    </div>
-                </div>
-        </div>
-        <div>
-                <img src="images/images (1).jpg" width="100" height="50" name="r_img" alt="Random image" />
-        </div>
-        <div class="footer">
-            <button id="button" onclick="randomimage()">Show Image</button>
-            <button type="button" class="btn btn-primary">Reset</button>
+<div class="header">
+        <h1 class="shadow-lg p-3 mb-5 bg-wite rounded emoji-head" style="color: white;">EMOJI GAME</h1>
+</div>
+<div class="second">
+    <div class="card count" style="width: 11rem;float:left;">
+        <div class="card-body" style="background-color:black;">
+            <h5 class="card-title" style="color: white;">COUNTDOWN</h5>
+            <div id="countdown"  style="color: white;text-align: center;font-size: 25px;">15</div>
         </div>
     </div>
+    <div class="emoji_img" style="float:left;">
+        <img src="images/images (1).jpg" name="r_img" alt="Random image" />
+    </div>
+    <div class="scoreboard"><!--scoreboard-->
+        <div class="card score" style="width: 11rem;float:left;">
+            <div class="card-body" style="background-color:black;">
+                <h5 class="card-title" style="color: white;text-align: center;">SCORE </h5>
+                <p class="score-display" style="color: white;text-align: center;">0</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="input">
+        <input type="text" placeholder="who am I?" size="50" >
+    </div>
+    <div class="buttons">
+            <button type="button" class="btn btn-dark butn1">PLAY AGAIN</button>
+            <button type="button" class="btn btn-dark butn2" onclick="randomimage()">SUBMIT</button>
+    </div>
+    <div>
+        <img src="images/Untitled-1.png" class="hestia_logo">
+        <img src="images/Untitled-2.png" class="iste-logo" width="200" height="200">
+    </div>
+</div>
+
 </body>
 </html>
